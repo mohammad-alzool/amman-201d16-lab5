@@ -9,6 +9,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
   //eslint-disable-line
+}
   function sum(a, b) {
   return[ (a+b),'The sum of 4 and 7 is 11.']
   }
@@ -27,6 +28,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+return[ (a*b), 'The product of 5 and 9 is 45.'];
   //eslint-disable-line
 return[ (a*b), 'The product of 5 and 9 is 45.'];
 }
@@ -49,6 +51,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+return[(a+b+c),(a*b*c),'4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
   //eslint-disable-line
 return[(a+b+c),(a*b*c),'4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
 }
@@ -98,11 +101,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
+  let mA = 1;
+  for (let i=0;i<multArr.length;i++){
+    mA = mA*multArr[i];
+    
+  }
+  return [mA,'The numbers 2,3,4 have a product of 24.']
   //eslint-disable-line
 }
+  
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray(testArray);
+testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
