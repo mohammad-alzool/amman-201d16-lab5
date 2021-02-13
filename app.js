@@ -8,11 +8,11 @@ Write a function called sum() that takes in two numbers as arguments and then re
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
 
 // Write your code here
+function sum(a, b) {
   //eslint-disable-line
+return[ (a+b),'The sum of 4 and 7 is 11.']
 }
-  function sum(a, b) {
-  return[ (a+b),'The sum of 4 and 7 is 11.']
-  }
+
 // Here is the test for sum(); uncomment it to run it
 testSum(4, 7);
 
@@ -30,7 +30,6 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
 return[ (a*b), 'The product of 5 and 9 is 45.'];
   //eslint-disable-line
-return[ (a*b), 'The product of 5 and 9 is 45.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -57,9 +56,6 @@ function sumAndMultiply(a, b, c) {
   let totalMu=multiply(aMub,c)[0];
   return[totalSum,totalMu, a+' and '+b+' and '+c+' sum to '+totalSum+'.', 'The product of '+a+' and '+b+' and '+c+' is '+totalMu+'.'];
 //eslint-disable-line
-return[(a+b+c),(a*b*c),'4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
-  //eslint-disable-line
-return[(a+b+c),(a*b*c),'4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
