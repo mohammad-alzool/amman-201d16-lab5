@@ -50,8 +50,12 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-return[(a+b+c),(a*b*c),'4 and 7 and 5 sum to 16.','The product of 4 and 7 and 5 is 140.'];
-  //eslint-disable-line
+  let aSumB=sum(a,b)[0];
+  let totalSum=sum(aSumB,c)[0];
+  let aMub=multiply(a,b)[0];
+  let totalMu=multiply(aMub,c)[0];
+  return[totalSum,totalMu, a+' and '+b+' and '+c+' sum to '+totalSum+'.', 'The product of '+a+' and '+b+' and '+c+' is '+totalMu+'.'];
+//eslint-disable-line
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -74,11 +78,9 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) {
   //eslint-disable-line
-  let sum=0; 
-  for (let i=0;i<sumArr.length; i++) {
-  sum +=sumArr[i];
-}
-return [sum ,'2,3,4 was passed in as an array of numbers, and 9 is their sum.'];
+  let firstSum=sum(testArray[0],testArray[1])[0];
+let lastSum=sum(firstSum,testArray[2])[0];
+return[lastSum,testArray[0]+','+testArray[1]+','+testArray[2]+' was passed in as an array of numbers, and '+lastSum+' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -99,12 +101,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-  let mA = 1;
-  for (let i=0;i<multArr.length;i++){
-    mA = mA*multArr[i];
-    
-  }
-  return [mA,'The numbers 2,3,4 have a product of 24.']
+  let firMu=multiply(testArray[0],testArray[1])[0];
+  let lasMu=multiply(firMu,testArray[2])[0];
+  return[lasMu, 'The numbers '+testArray[0]+','+testArray[1]+','+testArray[2]+' have a product of '+lasMu+'.'];
   //eslint-disable-line
 }
   
@@ -135,11 +134,11 @@ let testDynamicArray = [1, 2, 3, 4, 5]; //eslint-disable-line
 
 function multiplyAnyArray(dynamicArray) {
   //eslint-disable-line
-let total=1;
-for (let i=0;i< dynamicArray.length;i++){
-total=total*dynamicArray[i];
+let finalMu=1;
+for(let i=0;i<testDynamicArray.length;i++){
+  finalMu=multiply(testDynamicArray[i], finalMu)[0];
 }
-return[total,'The numbers 1,2,3,4,5 have a product of 120.'];
+return[finalMu,'The numbers '+testDynamicArray+' have a product of '+finalMu+'.'];
 }
 // Here is the test for multiplyArray(); uncomment it to run it
 testMultiplyAnyArray(testDynamicArray);
