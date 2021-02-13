@@ -10,7 +10,8 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) {
   //eslint-disable-line
-return[ (a+b),'The sum of 4 and 7 is 11.']
+let summation = a + b;
+return [summation, 'The sum of ' + a + ' and ' + b + ' is ' + summation + '.']
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -28,7 +29,8 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-return[ (a*b), 'The product of 5 and 9 is 45.'];
+let multi = a * b;
+return [multi, 'The product of ' + a + ' and ' + b + ' is ' + multi + '.']
   //eslint-disable-line
 }
 
